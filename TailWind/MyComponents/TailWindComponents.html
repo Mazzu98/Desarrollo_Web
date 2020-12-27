@@ -1,0 +1,66 @@
+<!--Nav Bar Resopnsive 1-->
+<nav class="sticky top-0 z-50">
+  <div class="w-full h-16 text-gray-200 bg-gray-900 ">
+    <div class="flex h-full items-center justify-between">
+      <div class="ml-4 flex-grow sm:hidden"></div>
+      <!--Icono-->
+      <div class="flex items-center pl-8">
+        <ion-icon class="text-4xl pb-1" name="logo-apple"></ion-icon>
+        <div class="text-xl">IField</div>
+      </div>
+      <!--Boton-->
+      <div class="sm:hidden flex-grow flex justify-end">
+        <button id="boton" class="mr-2 pl-2 focus:outline-none focus:ring-0">
+          <ion-icon class="text-5xl pt-1 pr-2" name="menu-outline"></ion-icon>
+        </button>
+      </div>
+      <!--Menu Fijo-->
+      <div class="hidden sm:block ml-6 mr-14">
+        <div class="flex space-x-4">
+          <a href="#Home"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Home</a>
+          <a href="#Trabajos"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Trabajos</a>
+          <a href="#Integrantes"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Integrantes</a>
+          <a href="#Contacto"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Menú desplegable-->
+  <div id="menu" class="hidden">
+    <div class="absolute z-50 w-full flex-col text-right pb-4 space-y-2 space-x-4 bg-black bg-opacity-90">
+      <div>
+        <a href="#Home"
+          class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+      </div>
+      <div>
+        <a href="#Trabajos"
+          class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Trabajos</a>
+      </div>
+      <div>
+        <a href="#Integrantes"
+          class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Integrantes</a>
+      </div>
+      <div>
+        <a href="#Contacto"
+          class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!--Basic Card-->
+<div>
+  <div class="max-w-screen-2xl mx-auto my-10 grid grid-col-1 sm:grid-cols-3 sm:gap-10">
+    <div class="bg-gray-900 sm:col-start-2 mx-8 px-4 py-4 rounded-lg shadow-2xl border-black border-2">
+      <img class="rounded-full border border-black mx-auto" src="Imagen_350X350.png" alt="Leonoide">
+      <h1 class="pb-4 text-center text-2xl text-gray-300 font-bold font-thin">Lorem es genial</h1>
+      <p class="pt-2 border-t border-gray-300 text-lg text-gray-200 font-thin px-6">Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ipsa, suscipit ipsum maxime repellat soluta quaerat eius obcaecati aliquam dolor
+        quod reprehenderit asperiores vitae expedita possimus vel error recusandae nemo voluptas!</p>
+    </div>
+  </div>
+</div>
