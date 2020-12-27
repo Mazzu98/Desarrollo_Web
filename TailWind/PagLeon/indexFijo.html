@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <title>Document</title>
+</head>
+
+<body id="cuerpo" class="bg-gradient-to-r from-green-400 to-blue-400">
+
+  <nav id="menu" class="sticky top-0 z-50">
+    <div class="w-full h-16 text-gray-200 bg-gray-900 ">
+      <div class="flex h-full items-center justify-between">
+        <div class="ml-4 flex-grow sm:hidden"></div>
+        <!--Icono-->
+        <div class="flex items-center pl-8">
+          <ion-icon class="text-4xl pb-1" name="logo-apple"></ion-icon>
+          <div class="text-xl">IField</div>
+        </div>
+        <!--Boton-->
+        <div class="sm:hidden flex-grow flex justify-end">
+          <button id="boton" class="mr-2 pl-2 focus:outline-none focus:ring-0" v-on:click="boton = !boton;">
+            <ion-icon class="text-5xl pt-1 pr-2" name="menu-outline"></ion-icon>
+          </button>
+        </div>
+        <!--Menu Fijo-->
+        <div class="hidden sm:block ml-6 mr-14">
+          <div class="flex space-x-4">
+            <a href="#Home"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Home</a>
+            <a href="#Trabajos"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Trabajos</a>
+            <a href="#Integrantes"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Integrantes</a>
+            <a href="#Contacto"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--Menú desplegable-->
+    <div id="menu" :class="{'':boton,'hidden':!boton}">
+      <div class="absolute z-50 w-full flex-col text-right pb-4 space-y-2 space-x-4 bg-black bg-opacity-90">
+        <div>
+          <a href="#Home"
+            class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" v-on:click="boton = !boton;">Home</a>
+        </div>
+        <div>
+          <a href="#Trabajos"
+            class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" v-on:click="boton = !boton;">Trabajos</a>
+        </div>
+        <div>
+          <a href="#Integrantes"
+            class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"v-on:click="boton = !boton;">Integrantes</a>
+        </div>
+        <div>
+          <a href="#Contacto"
+            class="clickable text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"v-on:click="boton = !boton;">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="Home" class="">
+    <div>
+      <img class="w-full imgHome h-60 sm:hidden" src="Iphone_Espiral_Chico.png" alt="Iphones">
+      <img class="w-full imgHome hidden sm:block" src="Iphone_Espiral_Grande.png" alt="Iphones">
+    </div>
+    <div class="top-24 top-18 left-10 md:16 lg:left-28 lg:top-48   absolute text-gray-200">
+      <div class="text-2xl sm:text-5xl">
+        Reparación de Iphones
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 ">
+        <div class="col-start-1 mt-6 mr-2 sm:text-2xl">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis non et rerum libero dolorum pariatur
+          tempora
+          ab, autem repellendus vel hic, maiores voluptatibus molestiae excepturi
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="Trabajos" class="max-w-screen-2xl mx-auto px-10">
+    <div class="-mx-4">
+      <div class="grid grid-rows-3 sm:grid-rows-1 grid-cols-1 sm:grid-cols-3 gap-x-4 2xl:gap-x-10 mt-10 ">
+        <div
+          class="bg-gray-900 text-gray-200 col-span-full sm:col-span-1 mb-6 shadow-2xl rounded-lg px-2 sm:-mx-4 container ">
+          <div class="relative mx-2">
+            <img class="mx-auto w-full mt-4 rounded-lg" src="Imagenes/Iphone_Repair_350X350.png" alt="">
+            <H1
+              class="text-center text-white text-2xl font-bold absolute bottom-0 bg-black bg-opacity-60 w-full rounded-b-lg">
+              Cambio de modulo</H1>
+          </div>
+          <p class="text-left pt-4 pl-4 pb-4 text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. iusto
+            consectetur adipisicing elit. iusto!</p>
+        </div>
+        <div class="bg-gray-900 text-gray-200 col-span-full sm:col-span-1 mb-6 shadow-2xl rounded-lg px-2  container ">
+          <div class="relative mx-2">
+            <img class="mx-auto w-full mt-4 rounded-lg" src="Imagenes/IPhone_Back_Broken_350X350.png" alt="">
+            <H1
+              class="text-center text-white text-2xl font-bold absolute bottom-0 bg-black bg-opacity-60 w-full rounded-b-lg">
+              Arreglo de carcasa</H1>
+          </div>
+          <p class="text-left pt-4 pl-4 pb-4 text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. iusto
+            consectetur adipisicing elit. iusto!</p>
+        </div>
+        <div
+          class="bg-gray-900 text-gray-200 col-span-full sm:col-span-1 mb-6 shadow-2xl rounded-lg px-2 sm:mx-4 container ">
+          <div class="relative mx-2">
+            <img class="mx-auto w-full mt-4 rounded-lg" src="Imagenes/Iphone_Screen_350X350.png" alt="">
+            <H1
+              class="text-center text-white text-2xl font-bold absolute bottom-0 bg-black bg-opacity-60 w-full rounded-b-lg">
+              Arreglo de pantalla</H1>
+          </div>
+          <p class="text-left pt-4 pl-4 pb-4 text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. iusto
+            consectetur adipisicing elit. iusto!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="Integrantes">
+    <div class="text-center text-5xl mt-8">Integrantes</div>
+    <div class="max-w-screen-2xl mx-auto my-10 grid grid-col-1 sm:grid-cols-3 sm:gap-10">
+      <div class="bg-gray-900 sm:col-start-2 mx-8 px-4 py-4 rounded-lg shadow-2xl border-black border-2">
+        <img class="rounded-full border border-black mx-auto" src="Imagenes/Leoncito_350X350.png" alt="Leonoide">
+        <h1 class="pb-4 text-center text-2xl text-gray-300 font-bold font-thin">Leon ChicusPitus</h1>
+        <p class="pt-2 border-t border-gray-300 text-lg text-gray-200 font-thin px-5 ">Leon es un niño Prodigio que
+          se dedica a agreglar aifons para los chetos que
+          lo precisen</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="Contacto">
+    <div
+      class="flex w-full h-10 sm:h-16 bg-gray-900 items-center justify-around sm:justify-end sm:gap-10 sm:text-xl text-white sm:pr-6">
+      <div>
+        <ion-icon class="align-middle pb-1" name="logo-whatsapp"></ion-icon>
+        <div class="inline">+54-91112345678</div>
+      </div>
+      <div>
+        <ion-icon class="align-middle pb-1" name="logo-instagram"></ion-icon>
+        <a href="https://www.instagram.com/ifieldsupport/" target="blank_">IFieldSupport</a>
+      </div>
+    </div>
+  </footer>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+
+    const menu = new Vue({
+      el: '#menu',
+      data:{
+        boton: false
+      },
+    })
+
+  </script>
+</html>
