@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/tailwind.css">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <title>Akal</title>
+</head>
+
+<body class="bg-gray-200">
+    <nav>
+        <div id="cuentas" class="hidden md:block bg-akal-red h-10 flex text-right pt-1 px-16">
+            <div class="text-white align-middle inline mx-6">
+                <ion-icon class="align-middle text-3xl" name="person-circle-outline"></ion-icon>
+                <div class="align-middle inline text-sm font-semibold"> MI CUENTA</div>
+            </div>
+            <div class="text-white align-middle inline">
+                <ion-icon class="align-middle text-3xl" name="cart-outline"></ion-icon>
+            </div>
+
+        </div>
+        <div class="bg-akal-gray h-24 relative flex justify-center  lg:px-10 ">
+            <div class="md:hidden absolute text-3xl text-white left-2 top-9">
+                <button onclick="menuButton()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="my-auto lg:flex-grow">
+                <img class="h-9  "
+                    src="https://www.akal.com/media/akal/images/thumbs/es_es-es_es-logo-akal-white-trans-163x42.png"
+                    alt="">
+            </div>
+            <div class="hidden md:block  my-auto sm:mr-2 lg:mr-10 ">
+                <ul class="flex gap-x-2 text-xs text-gray-200 ">
+                    <li class="hover:bg-akal-darkRed sm:px-1 lg:px-3 py-2 rounded-md ">
+                        <a href="#">CONTACTOS</a>
+                    </li>
+                    <li class="hover:bg-akal-darkRed sm:px-1 lg:px-3 py-2 rounded-md ">
+                        <a href="#">MANUSCRITOS</a>
+                    </li>
+                    <li class="hover:bg-akal-darkRed sm:px-1 lg:px-3 py-2 rounded-md ">
+                        <a href="#">DISTRIBUIDORES</a>
+                    </li>
+                    <li class="hover:bg-akal-darkRed sm:px-1 lg:px-3 py-2 rounded-md ">
+                        <a href="#">¿QUIENES SOMOS?</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden md:block relative my-auto">
+                <ion-icon class="absolute text-2xl top-1 left-1 " name="search-outline"></ion-icon>
+                <input class="rounded-md h-8 w-64 align-bottom pl-9 pr-4" placeholder="BUSCAR" type="text">
+            </div>
+            <div class="bg-akal-darkRed absolute bottom-0 left-0 h-1 w-full"></div>
+        </div>
+        <div id="menu" class="bg-akal-gray md:bg-white hidden absolute md:static z-50 md:inline-flex flex w-64 md:w-full h-full md:h-auto bg-white px-4 lg:px-16 shadow-md justify-between">
+            <div class="h-full float-left my-auto">
+                <ul class="md:flex mt-6 md:m-0 h-full w-full text-gray-100 md:text-gray-800">
+                    <li>
+                        <div class="block md:hidden relative my-auto">
+                            <ion-icon class="absolute text-gray-200 text-xl top-1 left-1 " name="search-outline"></ion-icon>
+                            <input class="rounded-md bg-akal-darkRed h-6 w-52 align-bottom pl-9 pr-4" placeholder="BUSCAR" type="text">
+                        </div>
+                    </li>
+                    <li class="mt-4 mb-4 pt-3 md:py-0 md:my-auto ">
+                        <a class="uppercase text-sm font-semibold ml-1 md:mr-4" href="#">Catálogo</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mx-4" href="#">Autores</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mx-4" href="#">Novedades</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mx-4" href="#">Ebooks</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mr-4 md:ml-0 lg:mx-4" href="#">Noticias y Eventos</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mx-0 lg:mx-4" href="#">Selecciones temáticas</a>
+                    </li>
+                    <li class="my-3 pt-4 md:py-0 md:my-auto border-t border-gray-900 md:border-0">
+                        <a class="uppercase text-sm font-semibold mx-1 md:mx-4" href="#">Blog</a>
+                    </li>
+                    <li class="block md:hidden text-white align-middle my-3 pt-4 border-t border-gray-900 md:border-0">
+                        <a href="#">
+                            <ion-icon class="align-middle text-2xl" name="person-circle-outline"></ion-icon>
+                            <div class="align-middle inline text-sm font-semibold"> Iniciar sesión</div>
+                        </a>
+                    </li>
+                    <li class="block md:hidden text-white align-middle py-4 border-t border-gray-900 md:border-0">
+                        <a href="#">
+                            <ion-icon class="align-middle text-2xl" name="cart-outline"></ion-icon>
+                            <div class="align-middle inline text-sm font-semibold">Carrito</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class=" hidden md:inline-flex h-full my-auto py-1 ">
+                <a href="#">
+                    <img class="w-9 h-9 mx-3 my-auto" src="Imagenes/akal_loguito.png" alt="">
+                </a>
+                <a href="#">
+                    <img class="w-9 h-9 my-auto" src="Imagenes/siglo21_loguito.png" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carousel" class="mt-2 relative w-9/10 h-96 mx-auto shadow-xl">
+        <img class="absolute w-full h-full md:px-4 md:pb-6 md:mt-2  object-cover object-right "
+        src="Imagenes/carousel_1.png" alt="">
+    </div>
+
+    <div id="novedades" class="mt-10 mx-4 sm:mx-20 bg-white shadow-lg ">
+        <h1 class="text-center text-3xl text-akal-red font-semibold pt-6 pb-3">NUESTRAS NOVEDADES</h1>
+        <img class="mx-auto border-t border-black"
+        src="Imagenes/novedades.png" alt="">
+    </div>
+
+    <div class="mx-4 md:mx-20 mt-10 md:grid md:grid-cols-12 gap-8 ">
+        <div class="col-span-9">
+            <section class="bg-white shadow-lg p-8 ">
+                <article class="">
+                    <h1 class="text-center lg:text-left  text-akal-red text-2xl pb-3">GRANDES LIBROS ANOTADOS</h1>
+                    <div class="flex flex-wrap justify-center sm:justify-start md:justify-center lg:justify-start  gap-6  pt-6 border-t border-black">
+                        <div class=" w-64">
+                            <div class="float-left w-16 h-20  bg-red-500 mr-3 mt-2 "></div>
+                            <h1 class="font-semibold"> Hans Christian Andersen. Edición anotada</h1>
+                            <p>Andersen Hans Christian, Maria Tatar, Lucía Márquez de la Plata
+                                «Maria Tatar ha creado una antología de las historias más memorables de Andersen...</p>
+                        </div>
+                        <div class=" w-64">
+                            <div class="float-left w-16 h-20 bg-red-500 mr-3 mt-2 "></div>
+                            <h1 class="font-semibold"> Hans Christian Andersen. Edición anotada</h1>
+                            <p>Andersen Hans Christian, Maria Tatar, Lucía Márquez de la Plata
+                                «Maria Tatar ha creado una antología de las historias más memorables de Andersen...</p>
+                        </div>
+                        <div class=" w-64">
+                            <div class="float-left w-16 h-20 bg-red-500 mr-3 mt-2 "></div>
+                            <h1 class="font-semibold"> Hans Christian Andersen. Edición anotada</h1>
+                            <p>Andersen Hans Christian, Maria Tatar, Lucía Márquez de la Plata
+                                «Maria Tatar ha creado una antología de las historias más memorables de Andersen...</p>
+                        </div>
+                        
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class=" col-start-10 col-span-3 bg-white shadow-lg">
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function menuButton(){
+        let menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    }
+</script>
